@@ -1,17 +1,18 @@
 .DEFAULT_GOAL := help
-.PHONY: build deps node-build node jar-build java all help
+.PHONY: build deps node-build node jar-build java dotnetcore all help
 
 deps: ## installs all the dependencies
 	@echo "installing dependencies" 
 	@echco "clojure/java:"
 	@brew install clojure/tools/clojure
-	@brew install gradle
+	@brew install gradle # to build and run Java sample
 	@echco "node:"
-	@npm install -g yarn
+	@nvm install
+	@npm install -g yarn # to run Node.js sample
 	@echco "dotnet:"
 	@brew tap isen-ng/dotnet-sdk-versions
 	@brew install --cask dotnet-sdk5-0-400 #clojure clr supports .NET 5 currently
-	@dotnet tool install --global Clojure.Main
+	@dotnet tool install --global Clojure.Main #for clojure clr REPL
 
 node-build: ## builds common lib js package
 	@echo "clj -> js"
