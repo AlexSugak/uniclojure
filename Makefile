@@ -3,15 +3,21 @@
 
 deps: ## installs all the dependencies
 	@echo "installing dependencies" 
+	@echco "clojure/java:"
 	@brew install clojure/tools/clojure
 	@brew install gradle
+	@echco "node:"
 	@npm install -g yarn
+	@echco "dotnet:"
+	@brew tap isen-ng/dotnet-sdk-versions
+	@brew install --cask dotnet-sdk5-0-400 #clojure clr supports .NET 5 currently
+	@dotnet tool install --global Clojure.Main
 
 node-build: ## builds common lib js package
 	@echo "clj -> js"
 	@rm -rf ./dist/node
 	@cd ./lib-clj; \
-	clj -M -m cljs.main --target node --output-dir ../dist/node -c common.lib # add --optimizations advanced for production build
+	clj -M -m cljs.main --target node --output-dir ../dist/node -c common.lib # add "--optimizations advanced" for production build
 	@echo "done"
 
 node: node-build ## builds and runs node app 
@@ -36,7 +42,17 @@ java: jar-build ## builds and runs java app
 	@java -jar ./app-java/app/build/libs/app.jar
 	@echo "done"
 
-all: java node ## builds and tests all platforms
+dotnetcore: ## builds and runs .NET Core app
+	@echo "running .NET Core app"
+	@cd ./app-dotnetcore; \
+	if [ "$(shell arch)" = "arm64" ]; then \
+        dotnetx64 run; \
+    else \
+        dotnet run; \
+    fi # on Mac M1 dotnet 5 SDK is linked to dotnetx64
+	@echo "done"
+
+all: java node dotnetcore ## builds and tests all platforms
 	@echo "all done"
 
 help:
