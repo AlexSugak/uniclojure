@@ -1,0 +1,12 @@
+{
+  "name": "app-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "source-map-support": "^0.5.21"
+  }
+}
