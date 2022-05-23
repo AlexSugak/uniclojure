@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC79DB9028398A810096E2A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC79DB8F28398A810096E2A1 /* main.m */; };
+		EC886E1D283AD48C00892B05 /* CLJMRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC886E0A283A68A400892B05 /* CLJMRuntime.framework */; };
+		EC886E32283ADD4800892B05 /* common_DOT_lib.m in Sources */ = {isa = PBXBuildFile; fileRef = EC886E2C283ADD4800892B05 /* common_DOT_lib.m */; };
+		EC886E34283ADD4800892B05 /* cljm_DOT_core.m in Sources */ = {isa = PBXBuildFile; fileRef = EC886E2E283ADD4800892B05 /* cljm_DOT_core.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC886E09283A68A400892B05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC886E04283A68A400892B05 /* CLJMRuntime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 887C20DE15C18F5B006EC31D;
+			remoteInfo = CLJMRuntime;
+		};
+		EC886E0B283A68A400892B05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC886E04283A68A400892B05 /* CLJMRuntime.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 887C20F615C18F5B006EC31D;
+			remoteInfo = CLJMRuntimeTests;
+		};
+		EC886E19283AD43900892B05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC886E04283A68A400892B05 /* CLJMRuntime.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 887C20DD15C18F5B006EC31D;
+			remoteInfo = CLJMRuntime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC79DB8C28398A810096E2A1 /* app-objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "app-objc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC79DB8F28398A810096E2A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC886E04283A68A400892B05 /* CLJMRuntime.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CLJMRuntime.xcodeproj; path = clojurem/runtime/CLJMRuntime/CLJMRuntime.xcodeproj; sourceTree = "<group>"; };
+		EC886E24283AD9A700892B05 /* app-objc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "app-objc.entitlements"; sourceTree = "<group>"; };
+		EC886E2C283ADD4800892B05 /* common_DOT_lib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_DOT_lib.m; sourceTree = "<group>"; };
+		EC886E2E283ADD4800892B05 /* cljm_DOT_core.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cljm_DOT_core.m; sourceTree = "<group>"; };
+		EC886E30283ADD4800892B05 /* common_DOT_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_DOT_lib.h; sourceTree = "<group>"; };
+		EC886E31283ADD4800892B05 /* cljm_DOT_core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cljm_DOT_core.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC79DB8928398A810096E2A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC886E1D283AD48C00892B05 /* CLJMRuntime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC79DB8328398A810096E2A1 = {
+			isa = PBXGroup;
+			children = (
+				EC79DB8E28398A810096E2A1 /* app-objc */,
+				EC79DB8D28398A810096E2A1 /* Products */,
+				EC886E03283A68A400892B05 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC79DB8D28398A810096E2A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC79DB8C28398A810096E2A1 /* app-objc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC79DB8E28398A810096E2A1 /* app-objc */ = {
+			isa = PBXGroup;
+			children = (
+				EC886E2A283ADD0F00892B05 /* Supporting Files */,
+				EC886E24283AD9A700892B05 /* app-objc.entitlements */,
+				EC79DB8F28398A810096E2A1 /* main.m */,
+			);
+			path = "app-objc";
+			sourceTree = "<group>";
+		};
+		EC886E03283A68A400892B05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC886E04283A68A400892B05 /* CLJMRuntime.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC886E05283A68A400892B05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC886E0A283A68A400892B05 /* CLJMRuntime.framework */,
+				EC886E0C283A68A400892B05 /* CLJMRuntimeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC886E2A283ADD0F00892B05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC886E2B283ADD4800892B05 /* objc */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC886E2B283ADD4800892B05 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				EC886E2C283ADD4800892B05 /* common_DOT_lib.m */,
+				EC886E30283ADD4800892B05 /* common_DOT_lib.h */,
+				EC886E2E283ADD4800892B05 /* cljm_DOT_core.m */,
+				EC886E31283ADD4800892B05 /* cljm_DOT_core.h */,
+			);
+			name = objc;
+			path = ../../../dist/objc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC79DB8B28398A810096E2A1 /* app-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC79DB9328398A810096E2A1 /* Build configuration list for PBXNativeTarget "app-objc" */;
+			buildPhases = (
+				EC79DB8828398A810096E2A1 /* Sources */,
+				EC79DB8928398A810096E2A1 /* Frameworks */,
+				EC886E35283B6E4100892B05 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC886E1A283AD43900892B05 /* PBXTargetDependency */,
+			);
+			name = "app-objc";
+			productName = "app-objc";
+			productReference = EC79DB8C28398A810096E2A1 /* app-objc */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC79DB8428398A810096E2A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					EC79DB8B28398A810096E2A1 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = EC79DB8728398A810096E2A1 /* Build configuration list for PBXProject "app-objc" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC79DB8328398A810096E2A1;
+			productRefGroup = EC79DB8D28398A810096E2A1 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EC886E05283A68A400892B05 /* Products */;
+					ProjectRef = EC886E04283A68A400892B05 /* CLJMRuntime.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				EC79DB8B28398A810096E2A1 /* app-objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EC886E0A283A68A400892B05 /* CLJMRuntime.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CLJMRuntime.framework;
+			remoteRef = EC886E09283A68A400892B05 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EC886E0C283A68A400892B05 /* CLJMRuntimeTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CLJMRuntimeTests.octest;
+			remoteRef = EC886E0B283A68A400892B05 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EC886E35283B6E4100892B05 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -R ${BUILT_PRODUCTS_DIR} ${PROJECT_DIR}/out\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC79DB8828398A810096E2A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC886E34283ADD4800892B05 /* cljm_DOT_core.m in Sources */,
+				EC886E32283ADD4800892B05 /* common_DOT_lib.m in Sources */,
+				EC79DB9028398A810096E2A1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC886E1A283AD43900892B05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CLJMRuntime;
+			targetProxy = EC886E19283AD43900892B05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EC79DB9128398A810096E2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		EC79DB9228398A810096E2A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		EC79DB9428398A810096E2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "app-objc/app-objc.entitlements";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		EC79DB9528398A810096E2A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "app-objc/app-objc.entitlements";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				NEW_SETTING = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC79DB8728398A810096E2A1 /* Build configuration list for PBXProject "app-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC79DB9128398A810096E2A1 /* Debug */,
+				EC79DB9228398A810096E2A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC79DB9328398A810096E2A1 /* Build configuration list for PBXNativeTarget "app-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC79DB9428398A810096E2A1 /* Debug */,
+				EC79DB9528398A810096E2A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC79DB8428398A810096E2A1 /* Project object */;
+}

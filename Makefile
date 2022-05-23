@@ -3,22 +3,24 @@
 
 deps: ## installs all the dependencies
 	@echo "installing dependencies" 
-	@echco "clojure/java:"
+	@echo "clojure/java:"
 	@brew install clojure/tools/clojure
 	@brew install gradle # to build and run Java sample
-	@echco "node:"
+	@echo "node:"
 	@nvm install
 	@npm install -g yarn # to run Node.js sample
-	@echco "dotnet:"
+	@echo "dotnet:"
 	@brew tap isen-ng/dotnet-sdk-versions
 	@brew install --cask dotnet-sdk5-0-400 #clojure clr supports .NET 5 currently
 	@dotnet tool install --global Clojure.Main #for clojure clr REPL
+	@echo "clojurem:"
+	@./app-objc/clojurem/script/bootstrap 
 
 node-build: ## builds common lib js package
 	@echo "clj -> js"
 	@rm -rf ./dist/node
 	@cd ./lib-clj; \
-	clj -M -m cljs.main --target node --output-dir ../dist/node -c common.lib # add "--optimizations advanced" for production build
+	clj -M -m cljs.msrcain --target node --output-dir ../dist/node -c common.lib # add "--optimizations advanced" for production build
 	@echo "done"
 
 node: node-build ## builds and runs node app 
@@ -53,7 +55,33 @@ dotnetcore: ## builds and runs .NET Core app
     fi # on Mac M1 dotnet 5 SDK is linked to dotnetx64
 	@echo "done"
 
-all: java node dotnetcore ## builds and tests all platforms
+clojurem-build: ## builds common lib to obj-c using clojurem compiler
+	@echo "clj -> obj-c"
+	@rm -rf ./dist/objc
+	@rm -rf ./app-objc/clojurem/tmp
+	@mkdir ./app-objc/clojurem/tmp
+
+	@for file in $(shell find ./lib-clj/src -name \*.cljc); do \
+		basename "$$file" .cljc | xargs -I {} cp $$file ./app-objc/clojurem/tmp/{}.cljm; \
+	done
+	cp ./app-objc/clojurem/src/cljm/cljm/core.cljm ./app-objc/clojurem/tmp/core.cljm
+
+	@cd ./app-objc/clojurem; \
+	./bin/cljmc ./tmp "{:out ../../dist/objc}"
+	@echo "done"
+
+objc: clojurem-build ## builds and runs objective-c app
+	@echo "running Objective-C app"
+	@rm -rf ./app-objc/out
+	@xcodebuild -quiet -scheme app-objc -project ./app-objc/app-objc.xcodeproj build
+	@mkdir ./app-objc/out/bin
+	@mkdir ./app-objc/out/Frameworks
+	@mv ./app-objc/out/app-objc ./app-objc/out/bin/app-objc
+	@mv ./app-objc/out/CLJMRuntime.framework/ ./app-objc/out/Frameworks/CLJMRuntime.framework/
+	@./app-objc/out/bin/app-objc
+	@echo "done"
+
+all: java node dotnetcore objc ## builds and tests all platforms
 	@echo "all done"
 
 help:

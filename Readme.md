@@ -12,7 +12,9 @@ This repo provides an example of a simple library code, written in Clojure, that
 - **TODO:** Browser: using [ClojureScript](https://clojurescript.org/) to transpile Clojure code to modern JS
 - .NET Core: using [ClojureCLR](https://github.com/clojure/clojure-clr) to host Clojure on .NET runtime
 - **TODO:** .NET Framework: using [ClojureCLR](https://github.com/clojure/clojure-clr) to build .dll from clojure files
-- **TODO:** C/ObjC: using one of [clojure-objc](https://github.com/galdolber/clojure-objc) [clojurem](https://github.com/joshaber/clojurem) [clojurec](https://github.com/schani/clojurec)
+- C/ObjC: using [clojurem](https://github.com/joshaber/clojurem) to transpile Clojure code to Objective C
+- **TODO:** C/ObjC: test [clojure-objc](https://github.com/galdolber/clojure-objc) and [clojurec](https://github.com/schani/clojurec)
+
 
 ## Getting started
 

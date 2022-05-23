@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+mkdir -p ./app-objc/clojurem/lib
+
+echo "Fetching Clojure..."
+curl -O -s https://repo1.maven.org/maven2/org/clojure/clojure/1.4.0/clojure-1.4.0.zip
+unzip -qu clojure-1.4.0.zip
+echo "Copying clojure-1.4.0/clojure-1.4.0.jar to lib/clojure.jar..."
+cp clojure-1.4.0/clojure-1.4.0.jar ./app-objc/clojurem/lib/clojure.jar
+echo "Cleaning up Clojure directory..."
+rm -rf clojure-1.4.0/
+echo "Cleaning up Clojure archive..."
+rm clojure-1.4.0.zip
+
+echo "[Bootstrap Completed]"
