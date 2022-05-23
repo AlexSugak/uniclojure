@@ -14,6 +14,8 @@ This repo provides an example of a simple library code, written in Clojure, that
 - **TODO:** .NET Framework: using [ClojureCLR](https://github.com/clojure/clojure-clr) to build .dll from clojure files
 - C/ObjC: using [clojurem](https://github.com/joshaber/clojurem) to transpile Clojure code to Objective C
 - **TODO:** C/ObjC: test [clojure-objc](https://github.com/galdolber/clojure-objc) and [clojurec](https://github.com/schani/clojurec)
+- **TODO:** Add scripting with [babashka](https://github.com/babashka/babashka) sample
+- **TODO:** Native binary via [GraalVM](https://github.com/clj-easy/graal-docs)
 
 
 ## Getting started
